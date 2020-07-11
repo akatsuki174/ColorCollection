@@ -13,21 +13,21 @@ struct ContentView: View {
             ExtractColorView()
                 .tabItem {
                     VStack {
-                        Image(systemName: "a")
+                        Image(systemName: "camera.on.rectangle.fill")
                         Text("色の抽出")
                     }
                 }.tag(1)
             ColorListView()
                 .tabItem {
                     VStack {
-                        Image(systemName: "a")
+                        Image(systemName: "list.bullet")
                         Text("色一覧")
                     }
                 }.tag(2)
             OthersView()
                 .tabItem {
                     VStack {
-                        Image(systemName: "a")
+                        Image(systemName: "questionmark.circle.fill")
                         Text("その他")
                     }
                 }.tag(3)
