@@ -9,7 +9,13 @@ import SwiftUI
 
 struct ExtractColorView: View {
     var body: some View {
-        Text("ExtractColorView")
+        VStack {
+            Text("ExtractColorView")
+            Image(systemName: "photo")
+                .resizable()
+                .scaledToFit()
+                .padding([.leading, .trailing], 16)
+        }
     }
 }
 
