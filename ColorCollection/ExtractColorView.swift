@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ExtractColorView: View {
     var body: some View {
@@ -14,8 +15,14 @@ struct ExtractColorView: View {
             Image(systemName: "photo")
                 .resizable()
                 .scaledToFit()
-                .padding([.leading, .trailing], 16)
+                .onTapGesture {
+                    var configuration = PHPickerConfiguration()
+                    configuration.filter = .images
+                    let picker = PHPickerViewController(configuration: configuration)
+                    print("hoge")
+                }        
         }
+        .padding([.leading, .trailing], 16)
     }
 }
 
