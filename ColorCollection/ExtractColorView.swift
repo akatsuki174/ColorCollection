@@ -9,18 +9,21 @@ import SwiftUI
 import PhotosUI
 
 struct ExtractColorView: View {
+    
+    @State private var showingPhotoPicker = false
+    
     var body: some View {
         VStack {
             Text("ExtractColorView")
-            Image(systemName: "photo")
-                .resizable()
-                .scaledToFit()
-                .onTapGesture {
-                    var configuration = PHPickerConfiguration()
-                    configuration.filter = .images
-                    let picker = PHPickerViewController(configuration: configuration)
-                    print("hoge")
-                }        
+            Button(action: {
+                self.showingPhotoPicker = true
+            }) {
+                Image(systemName: "photo")
+                    .resizable()
+                    .scaledToFit()
+            }.sheet(isPresented: $showingPhotoPicker, onDismiss: nil) {
+                
+            }
         }
         .padding([.leading, .trailing], 16)
     }
