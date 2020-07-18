@@ -54,9 +54,14 @@ struct PhotoPicker: UIViewControllerRepresentable {
             let itemProvider = results.first?.itemProvider
             
             if let itemProvider = itemProvider, itemProvider.canLoadObject(ofClass: UIImage.self) {
-                itemProvider.loadObject(ofClass: UIImage.self, completionHandler: { [weak self] image, error in
-                    if let image = image as? UIImage {
-                        self?.image = image
+                itemProvider.loadObject(ofClass: UIImage.self, completionHandler: { [weak self] selectedImage, error in
+                    DispatchQueue.main.async {
+                        guard let self = self else { return }
+                        if let selectedImage = selectedImage as? UIImage {
+                            self.image = selectedImage
+                        } else {
+                            
+                       }
                     }
                 })
             }
@@ -67,13 +72,14 @@ struct PhotoPicker: UIViewControllerRepresentable {
         var configuration = PHPickerConfiguration()
         configuration.filter = .images
         let picker = PHPickerViewController(configuration: configuration)
+        picker.delegate = context.coordinator
         return picker
     }
     
     func updateUIViewController(_ uiViewController: PHPickerViewController, context: UIViewControllerRepresentableContext<PhotoPicker>) {
     }
 
-    func makeCoordinator() -> Coordinator {
+    func makeCoordinator() -> PhotoPicker.Coordinator {
         let coordinator = Coordinator(image: $image)
         return coordinator
     }
