@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ColorListView: View {
+    var numberArray = ["1","2","3","4","5","6", "7"]
     var body: some View {
-        Text("ColorListView")
+        List(0..<numberArray.count) {i in
+            Text("\(numberArray[i])")
+        }
     }
 }
 
