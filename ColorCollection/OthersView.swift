@@ -9,7 +9,16 @@ import SwiftUI
 
 struct OthersView: View {
     var body: some View {
-        Text("OthersView")
+        VStack {
+            Form {
+                Section {
+                    Text("Q&A")
+                    Text("感想送信")
+                }
+                Text("バージョン")
+                    .font(.caption)
+            }
+        }
     }
 }
 
