@@ -9,14 +9,18 @@ import SwiftUI
 
 struct OthersView: View {
     var body: some View {
-        VStack {
-            Form {
-                Section {
-                    Text("Q&A")
-                    Text("感想送信")
+        NavigationView {
+            VStack {
+                Form {
+                    Section {
+                        NavigationLink(destination: FAQView()) {
+                            Text("FAQ")
+                        }
+                        Text("感想送信")
+                    }
+                    Text("バージョン")
+                        .font(.caption)
                 }
-                Text("バージョン")
-                    .font(.caption)
             }
         }
     }
