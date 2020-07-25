@@ -10,6 +10,7 @@ import SwiftUI
 struct ExtractColorView: View {
     
     @State var image: UIImage?
+    @State var color = Color.black
     @State private var showingPhotoPicker = false
     @State private var showingColorPicker = false
     
@@ -21,18 +22,14 @@ struct ExtractColorView: View {
             }) {
                 Image(systemName: "photo")
                     .resizable()
+                    .frame(width: 200)
                     .scaledToFit()
             }.sheet(isPresented: $showingPhotoPicker, onDismiss: nil) {
                 PhotoPicker(image: self.$image)
             }
-            Button(action: {
-                self.showingColorPicker = true
-            }) {
-                Image(systemName: "plus")
-                    .frame(width: 24, height: 24, alignment: .center)
-            }.sheet(isPresented: $showingColorPicker, onDismiss: nil) {
-                // show color picker
-            }
+            ColorPicker("Pick a color", selection: $color)
+                .frame(width: 150, height: 50)
+            Spacer()
         }
         .padding([.leading, .trailing], 16)
     }
