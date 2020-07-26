@@ -12,7 +12,6 @@ struct ExtractColorView: View {
     @State var image: UIImage?
     @State var color = Color.black
     @State private var showingPhotoPicker = false
-    @State private var showingColorPicker = false
     
     var body: some View {
         VStack {
