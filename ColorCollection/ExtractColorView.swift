@@ -10,7 +10,7 @@ import SwiftUI
 struct ExtractColorView: View {
     
     @State var image: UIImage?
-    @State var color = Color.black
+    @State var color = Color.gray
     @State private var showingPhotoPicker = false
     
     var body: some View {
@@ -28,6 +28,12 @@ struct ExtractColorView: View {
             }
             ColorPicker("Pick a color", selection: $color)
                 .frame(width: 150, height: 50)
+            Button(action: {
+                // save color
+            }, label: {
+                Text("色を保存")
+                    .foregroundColor(color)
+            })
             Spacer()
         }
         .padding([.leading, .trailing], 16)
