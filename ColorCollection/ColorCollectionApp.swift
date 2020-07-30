@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ColorCollectionApp: App {
+    let persistence = PersistenceManager.shared
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, persistence.persistentContainer.viewContext)
         }
     }
 }
