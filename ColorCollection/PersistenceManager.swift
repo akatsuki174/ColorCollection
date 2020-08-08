@@ -41,10 +41,21 @@ class PersistenceManager {
                 try persistentContainer.viewContext.save()
                 print("In CoreData.stack.save()")
             } catch {
-                
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+    
+    func printColors() {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedColorMO")
+        do {
+            let colors = try persistentContainer.viewContext.fetch(fetchRequest) as! [SavedColorMO]
+            for color in colors {
+                print("\(color.id), \(color.hex)")
+            }
+        } catch let error as NSError {
+            print(error)
         }
     }
 }

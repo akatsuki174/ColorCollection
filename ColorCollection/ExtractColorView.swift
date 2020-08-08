@@ -13,6 +13,8 @@ struct ExtractColorView: View {
     @State var color = Color.gray
     @State private var showingPhotoPicker = false
     
+    @Environment(\.managedObjectContext) var context
+    
     var body: some View {
         VStack {
             Text("ExtractColorView")
@@ -29,7 +31,7 @@ struct ExtractColorView: View {
             ColorPicker("Pick a color", selection: $color)
                 .frame(width: 150, height: 50)
             Button(action: {
-                // save color
+                saveColor()
             }, label: {
                 Text("色を保存")
                     .foregroundColor(color)
@@ -37,6 +39,14 @@ struct ExtractColorView: View {
             Spacer()
         }
         .padding([.leading, .trailing], 16)
+    }
+    
+    private func saveColor() {
+        let uiColor = color.uiColor()
+        let newColor = SavedColorMO(context: context)
+        newColor.id = UUID()
+        newColor.hex = uiColor.toHexString()
+        PersistenceManager.shared.save()
     }
 }
 
