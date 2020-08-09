@@ -46,6 +46,7 @@ struct ExtractColorView: View {
         let newColor = SavedColorMO(context: context)
         newColor.id = UUID()
         newColor.hex = uiColor.toHexString()
+        PersistenceManager.shared.insert(color: newColor)
         PersistenceManager.shared.save()
     }
 }

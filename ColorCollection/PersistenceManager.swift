@@ -35,6 +35,10 @@ class PersistenceManager {
         }
     }
     
+    func insert(color: SavedColorMO) {
+        persistentContainer.viewContext.insert(color)
+    }
+    
     func save() {
         if persistentContainer.viewContext.hasChanges {
             do {
