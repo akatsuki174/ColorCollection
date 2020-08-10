@@ -15,6 +15,11 @@ struct ExtractColorView: View {
     
     @Environment(\.managedObjectContext) var context
     
+    @FetchRequest(
+        entity: SavedColorMO.entity(),
+        sortDescriptors: []
+    ) var savedColors: FetchedResults<SavedColorMO>
+    
     var body: some View {
         VStack {
             Text("ExtractColorView")
@@ -37,6 +42,9 @@ struct ExtractColorView: View {
                     .foregroundColor(color)
             })
             Spacer()
+            ForEach(savedColors){ color in
+                Text("\(color.id), \(color.hex)")
+            }
         }
         .padding([.leading, .trailing], 16)
     }
