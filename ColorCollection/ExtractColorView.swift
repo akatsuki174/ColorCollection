@@ -50,7 +50,7 @@ struct ExtractColorView: View {
     }
     
     private func saveColor() {
-        let uiColor = color.uiColor()
+        let uiColor = UIColor(color)
         let newColor = SavedColorMO(context: context)
         newColor.id = UUID()
         newColor.hex = uiColor.toHexString()
