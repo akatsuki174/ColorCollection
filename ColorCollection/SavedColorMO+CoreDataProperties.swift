@@ -17,11 +17,6 @@ extension SavedColorMO {
 
     @NSManaged public var id: UUID
     @NSManaged public var hex: String
-
-    func convertToSavedColor() -> SavedColor {
-        SavedColor(id: self.id,
-                   hex: self.hex)
-    }
 }
 
 extension SavedColorMO : Identifiable {

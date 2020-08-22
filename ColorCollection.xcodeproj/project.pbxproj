@@ -14,7 +14,6 @@
 		1866BB5024D19D9100F312C3 /* SavedColorMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866BB4E24D19D9100F312C3 /* SavedColorMO+CoreDataClass.swift */; };
 		1866BB5124D19D9100F312C3 /* SavedColorMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866BB4F24D19D9100F312C3 /* SavedColorMO+CoreDataProperties.swift */; };
 		1866BB5324D2EBE500F312C3 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866BB5224D2EBE500F312C3 /* PersistenceManager.swift */; };
-		1866BB5824D3950500F312C3 /* SavedColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866BB5724D3950500F312C3 /* SavedColor.swift */; };
 		1866BB5B24D5461400F312C3 /* SavedColorMO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1866BB5924D5461400F312C3 /* SavedColorMO.xcdatamodeld */; };
 		1881B3CA24B20AA40075D636 /* ColorCollectionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881B3C924B20AA40075D636 /* ColorCollectionApp.swift */; };
 		1881B3CC24B20AA40075D636 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881B3CB24B20AA40075D636 /* ContentView.swift */; };
@@ -32,7 +31,6 @@
 		1866BB4E24D19D9100F312C3 /* SavedColorMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedColorMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1866BB4F24D19D9100F312C3 /* SavedColorMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedColorMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1866BB5224D2EBE500F312C3 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
-		1866BB5724D3950500F312C3 /* SavedColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedColor.swift; sourceTree = "<group>"; };
 		1866BB5A24D5461400F312C3 /* SavedColorMO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SavedColorMO.xcdatamodel; sourceTree = "<group>"; };
 		1881B3C624B20AA40075D636 /* ColorCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1881B3C924B20AA40075D636 /* ColorCollectionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionApp.swift; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 				18CDA47224CB29D700410FEB /* FAQView.swift */,
 				185B174424D0573E0064E4AF /* UIColorExtension.swift */,
 				1866BB5224D2EBE500F312C3 /* PersistenceManager.swift */,
-				1866BB5724D3950500F312C3 /* SavedColor.swift */,
 				1866BB5924D5461400F312C3 /* SavedColorMO.xcdatamodeld */,
 				1866BB4E24D19D9100F312C3 /* SavedColorMO+CoreDataClass.swift */,
 				1866BB4F24D19D9100F312C3 /* SavedColorMO+CoreDataProperties.swift */,
@@ -178,7 +175,6 @@
 				1822A93624B96E1000C761DD /* ColorListView.swift in Sources */,
 				1822A93824B96E2400C761DD /* OthersView.swift in Sources */,
 				18CDA47324CB29D700410FEB /* FAQView.swift in Sources */,
-				1866BB5824D3950500F312C3 /* SavedColor.swift in Sources */,
 				18AF83F424C7214B002B03A5 /* PhotoPicker.swift in Sources */,
 				1881B3CC24B20AA40075D636 /* ContentView.swift in Sources */,
 				185B174524D0573E0064E4AF /* UIColorExtension.swift in Sources */,
