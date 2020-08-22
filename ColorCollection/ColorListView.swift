@@ -18,11 +18,12 @@ struct ColorListView: View {
     var body: some View {
         List(0 ..< savedColors.count) { i in
             HStack {
-                VStack {
+                VStack(alignment: .leading) {
                     Text("\(savedColors[i].id)")
                     Text("\(savedColors[i].hex)")
                 }
-                VStack {
+                Spacer()
+                VStack(alignment: .trailing) {
                     Color(red: 64/255, green: 64/255, blue: 64/255)
                 }
                 .frame(width: 50, height: 50, alignment: .trailing)
