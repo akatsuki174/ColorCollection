@@ -5,7 +5,7 @@
 //  Created by Akatsuki on 2020/07/28.
 //
 
-import SwiftUI
+import UIKit
 
 extension UIColor {
     func toHexString() -> String {
