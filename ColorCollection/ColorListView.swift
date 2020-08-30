@@ -24,7 +24,7 @@ struct ColorListView: View {
                 }
                 Spacer()
                 VStack(alignment: .trailing) {
-                    Color(red: 64/255, green: 64/255, blue: 64/255)
+                    Color(hex: savedColors[i].hex)
                 }
                 .frame(width: 50, height: 50, alignment: .trailing)
             }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181E720D24FA95A100F9BD79 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E720C24FA95A100F9BD79 /* ColorExtension.swift */; };
 		1822A93424B96DFB00C761DD /* ExtractColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822A93324B96DFB00C761DD /* ExtractColorView.swift */; };
 		1822A93624B96E1000C761DD /* ColorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822A93524B96E1000C761DD /* ColorListView.swift */; };
 		1822A93824B96E2400C761DD /* OthersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822A93724B96E2400C761DD /* OthersView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		181E720C24FA95A100F9BD79 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		1822A93324B96DFB00C761DD /* ExtractColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractColorView.swift; sourceTree = "<group>"; };
 		1822A93524B96E1000C761DD /* ColorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListView.swift; sourceTree = "<group>"; };
 		1822A93724B96E2400C761DD /* OthersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				18AF83F324C7214B002B03A5 /* PhotoPicker.swift */,
 				18CDA47224CB29D700410FEB /* FAQView.swift */,
 				185B174424D0573E0064E4AF /* UIColorExtension.swift */,
+				181E720C24FA95A100F9BD79 /* ColorExtension.swift */,
 				1866BB5224D2EBE500F312C3 /* PersistenceManager.swift */,
 				1866BB5924D5461400F312C3 /* SavedColorMO.xcdatamodeld */,
 				1866BB4E24D19D9100F312C3 /* SavedColorMO+CoreDataClass.swift */,
@@ -180,6 +183,7 @@
 				185B174524D0573E0064E4AF /* UIColorExtension.swift in Sources */,
 				1881B3CA24B20AA40075D636 /* ColorCollectionApp.swift in Sources */,
 				1822A93424B96DFB00C761DD /* ExtractColorView.swift in Sources */,
+				181E720D24FA95A100F9BD79 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
