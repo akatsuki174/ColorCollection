@@ -25,6 +25,7 @@ struct ColorListView: View {
                 Spacer()
                 VStack(alignment: .trailing) {
                     Color(hex: savedColors[i].hex)
+                        .border(Color(UIColor.label), width: 1)
                 }
                 .frame(width: 50, height: 50, alignment: .trailing)
             }
