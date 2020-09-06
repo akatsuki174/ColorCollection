@@ -16,20 +16,27 @@ struct ColorListView: View {
     ) var savedColors: FetchedResults<SavedColorMO>
     
     var body: some View {
-        List(0 ..< savedColors.count) { i in
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("\(savedColors[i].id)")
-                    Text("\(savedColors[i].hex)")
+        List {
+            ForEach(savedColors, id: \.self) { color in
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("\(color.id)")
+                        Text("\(color.hex)")
+                    }
+                    Spacer()
+                    VStack(alignment: .trailing) {
+                        Color(hex: color.hex)
+                            .border(Color(UIColor.label), width: 1)
+                    }
+                    .frame(width: 50, height: 50, alignment: .trailing)
                 }
-                Spacer()
-                VStack(alignment: .trailing) {
-                    Color(hex: savedColors[i].hex)
-                        .border(Color(UIColor.label), width: 1)
-                }
-                .frame(width: 50, height: 50, alignment: .trailing)
             }
+            .onDelete(perform: deleteColor(offsets:))
         }
+    }
+    
+    func deleteColor(offsets: IndexSet) {
+        // TODO: 削除処理
     }
 }
 
