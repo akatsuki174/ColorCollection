@@ -51,6 +51,10 @@ class PersistenceManager {
         }
     }
     
+    func delete(color: SavedColorMO) {
+        persistentContainer.viewContext.delete(color)
+    }
+    
     func printColors() {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedColorMO")
         do {

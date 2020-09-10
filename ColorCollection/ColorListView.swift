@@ -36,7 +36,7 @@ struct ColorListView: View {
     }
     
     func deleteColor(offsets: IndexSet) {
-        // TODO: 削除処理
+        PersistenceManager.shared.delete(color: savedColors[offsets.first ?? 0])
     }
 }
 
